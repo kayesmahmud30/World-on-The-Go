@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./Country.css";
 
-const Country = ({country}) => {
+const Country = ({ country }) => {
   //   console.log(country.area.area);
   const [visited, setVisited] = useState(false);
 
