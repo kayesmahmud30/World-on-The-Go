@@ -1,14 +1,14 @@
-import React, { use, useState } from 'react';
+import React, { use, useState } from "react";
 import Country from "../Country/Country";
 import "./Countries.css";
 
 const Countries = ({ countriesPromise }) => {
-  const [visitedCountries, setVisitedCountries] = useState([])
-  
-  const handleVisitedCountries = (country)=>{
-    console.log('Visited Country country clicked', country)
-  }
-  
+  const [visitedCountries, setVisitedCountries] = useState([]);
+
+  const handleVisitedCountries = (country) => {
+    console.log("Visited Country country clicked", country);
+  };
+
   const countriesData = use(countriesPromise);
   const countries = countriesData.countries;
 
@@ -19,9 +19,9 @@ const Countries = ({ countriesPromise }) => {
       <div className="countries">
         {countries.map((country) => (
           <Country
-          key={country.cca3.cca3}
-          country={country}
-          handleVisitedCountries={handleVisitedCountries}
+            key={country.cca3.cca3}
+            country={country}
+            handleVisitedCountries={handleVisitedCountries}
           ></Country>
         ))}
       </div>
